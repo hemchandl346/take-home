@@ -1,0 +1,45 @@
+/* Main App Container */
+.app-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Header Styling */
+  .header {
+    text-align: center;
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 18px;
+  }
+  
+  .navbar a:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+  }
+  
+  /* Container for Search & Dog Listings */
+  .content {
+    margin-top: 20px;
+  }
+  
