@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Fetch Frontend Take-Home Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Demo & GitHub Repository
+**Live Deployed App:** (take-home-ten.vercel.app)  
+**GitHub Repository:** (https://github.com/hemchandl346/take-home.git)
 
-## Available Scripts
+##  About the Project
+This project is a **React-based web application** that allows users to search for adoptable dogs using the **Fetch API**. 
+Users can:
+- **Authenticate via login**
+- **Filter dogs by breed**
+- **Sort results alphabetically**
+- **Paginate through results**
+- **Add Favorite dogs & generate a match**
+- **View detailed dog information**
 
-In the project directory, you can run:
+The project is built using **Create React App** and follows best practices in **React development**.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack & Dependencies
+- **Frontend:** React.js
+- **State Management & API Calls:** Axios
+- **Routing:** React Router DOM
+- **Deployment:** Vercel
+- **Dependencies Used:**
+  - `axios` → For handling API requests
+  - `react-router-dom` → For client-side navigation
+  - `create-react-app` → Project setup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+Installation & Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Follow these steps to run the application locally.
 
-### `npm run build`
+1️⃣ Clone the Repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+git clone https://github.com/hemchandl346/take-home.git
+cd take-home
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2️⃣ Install Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm install axios and react-router-dom
 
-### `npm run eject`
+3️⃣ Run the Application
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Features & API Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1️⃣ User Authentication
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Users enter their name and email on the login page.
 
-## Learn More
+The app authenticates via Fetch's /auth/login API and stores session cookies.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2️⃣ Dog Search & Filtering
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Fetches all available dog breeds from /dogs/breeds.
 
-### Code Splitting
+Users can filter results by breed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3️⃣ Pagination & Sorting
 
-### Analyzing the Bundle Size
+Results are paginated (size=10, from=page * 10).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Sorting is available (breed:asc or breed:desc).
 
-### Making a Progressive Web App
+4️⃣ Favoriting & Matchmaking
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Users can add dogs to favorites.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Clicking "Find My Match" sends favorite dog IDs to /dogs/match and retrieves a match.
